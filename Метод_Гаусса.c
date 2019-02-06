@@ -33,7 +33,7 @@ int main()
 	Output_SLU(n_str, n_stolbik, a);
 	printf("Matrix of SLU:\n");
 	Output_Matrix(n_str, n_stolbik, a);
-	//удаление нулевого столбца 
+	//ГіГ¤Г Г«ГҐГ­ГЁГҐ Г­ГіГ«ГҐГўГ®ГЈГ® Г±ГІГ®Г«ГЎГ¶Г  
 	for (j = 0; j < n_stolbik - 1; j++)
 	{
 		for (i = 0; i < n_str; i++)
@@ -58,7 +58,7 @@ int main()
 	Output_Matrix(n_str, n_stolbik, a);
 	for (k = 1; k < n_str; k++)
 	{
-		//Схема единственного деления и уже поиска максимального элемента 
+		//Г‘ГµГҐГ¬Г  ГҐГ¤ГЁГ­Г±ГІГўГҐГ­Г­Г®ГЈГ® Г¤ГҐГ«ГҐГ­ГЁГї ГЁ ГіГ¦ГҐ ГЇГ®ГЁГ±ГЄГ  Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  
 		max_elements_string_number = k - 1;
 		for (i = k - 1; i < n_str - 1; i++)
 		{
@@ -88,7 +88,7 @@ int main()
 		}
 		k1 = k;
 	}
-	//Изменения с учётом погрешности
+	//Г€Г§Г¬ГҐГ­ГҐГ­ГЁГї Г± ГіГ·ВёГІГ®Г¬ ГЇГ®ГЈГ°ГҐГёГ­Г®Г±ГІГЁ
 	for (i = 0; i < n_str; i++)
 	{
 		for (j = 0; j < n_stolbik; j++)
@@ -97,7 +97,7 @@ int main()
 				a[i][j] = 0;
 		}
 	}
-	//Удаление нулевых строк
+	//Г“Г¤Г Г«ГҐГ­ГЁГҐ Г­ГіГ«ГҐГўГ»Гµ Г±ГІГ°Г®ГЄ
 	k = 0;
 	for (i = 0; i < n_str; i++)
 	{
@@ -196,7 +196,7 @@ int Output_roots(int str, int stolbik, float a[][N])
 	x = (float*)malloc((stolbik - 1) * sizeof(float));
 	printf("\n\nMatrix after taking errors into account\n\n ");
 	Output_Matrix(str, stolbik, a);
-	//Считаем ранг расширенной матрицы 
+	//Г‘Г·ГЁГІГ ГҐГ¬ Г°Г Г­ГЈ Г°Г Г±ГёГЁГ°ГҐГ­Г­Г®Г© Г¬Г ГІГ°ГЁГ¶Г» 
 	for (i = 0; i < str; i++)
 	{
 		for (j = 0; j < stolbik; j++)
@@ -206,7 +206,7 @@ int Output_roots(int str, int stolbik, float a[][N])
 				break;
 			}
 	}
-	// Считаем ранг матрицы 
+	// Г‘Г·ГЁГІГ ГҐГ¬ Г°Г Г­ГЈ Г¬Г ГІГ°ГЁГ¶Г» 
 	for (i = 0; i < str; i++)
 	{
 		for (j = 0; j < stolbik - 1; j++)
@@ -248,7 +248,7 @@ int Output_roots(int str, int stolbik, float a[][N])
 		//printf("Final Matrix for infinitely many solutions\n\n");
 		Output_Matrix(str, stolbik, a);
 		printf("The roots of equation :\n");
-		for (i = 0; i < str; i++)//Не всё готово тут ещё!!! 
+		for (i = 0; i < str; i++)//ГЌГҐ ГўГ±Вё ГЈГ®ГІГ®ГўГ® ГІГіГІ ГҐГ№Вё!!! 
 		{
 			for (j = 0; j < stolbik; j++)
 			{
